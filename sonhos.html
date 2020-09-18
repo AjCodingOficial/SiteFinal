@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf=8" />
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link  href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos2.css" />
+		<link rel="shortcut icon" href="img/titulo.png" type="image/x-png">
+	<style>
+			body{
+				background-color: pink;
+				margin-top: 0;
+				padding: 0;
+			}
+			.menu2{
+				width: 100%;
+				height: 50px;
+				background-color: rgba(50,50,50, .4);
+				font-family: Arial;
+
+			}
+			.menu2 ul{
+				list-style: none;
+				position: relative;
+			}
+
+			.menu2 ul li{
+				width: 150px;
+				float: left;
+			}
+			.menu2 a{
+				padding: 15px;
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				background-color: rgba(150,150,150, 0.4);
+				color: #000;
+			}
+
+			.menu2 ul ul{
+				position: absolute;
+				visibility: hidden;
+			}
+			.menu2 ul li:hover ul{
+				visibility: visible;
+			}
+			.menu a:hover{
+				background-color: rgba(50,50,50, 0.4);
+				color: green;
+			}
+			.menu2 ul ul li{
+				float: none;
+				border-bottom: solid 0px rgba(50,50,50, 0.4);
+
+			}
+
+			.menu2 ul ul li a{
+				background-color: rgba(50,50,50, 0.4);
+			}
+
+			label[for="bt_menu2"]{
+				padding: 5px;
+				background-color: pink;
+				color: #000;
+				font-family: Arial;
+				text-align: center;
+				font-size: 30px;
+				cursor: pointer;
+				width: 50px;
+				height: 50px;
+				margin-top: 10px;
+
+			}
+			#bt_menu2{
+				display: none;	
+			}
+
+			label[for="bt_menu2"]{
+				display: none;
+			}
+			@media(max-width: 800px){
+
+				label[for="bt_menu2"]{
+				display: block;
+				}
+				#bt_menu2:checked ~ .menu2{
+					margin-left: 0;
+				}
+				.menu2{
+					margin-top: 1px;
+					margin-left: -100%;
+					transition: all .4s;
+				}
+			 	.menu2 ul li{
+			 		width: 100%;
+			 		float: none;
+			 	}
+			 	.menu2 ul ul{
+			 		position: static;
+			 		overflow: hidden;
+			 		max-height: 0;
+			 		transition: all .4s;
+			 	}
+			 	.menu2 ul li:hover ul{
+			 		height: auto;
+			 		max-height: 200px;
+			 	}
+
+			 }
+
+			@media(max-width: 800px){
+
+				}
+				.texto{
+					margin-top: 1px;
+					color: green;
+					text-decoration: blink;
+					
+				}
+			 	.texto ul p{
+			 		width: 100%;
+			 		float: none;
+			 	}
+			 	.texto ul p{
+			 		max-height: 0;
+			 		
+			 	}
+			 	.texto ul p{
+			 		height: auto;
+			 		max-height: 200px;
+			 	}
+
+			 }
+			 .cor1{
+			 	color: green;
+			 }
+
+
+	</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="linha">
+				<header>
+					<div class="logoimg coluna col5">
+						<a href="index.html"><img src="img/logo.png" ></a>
+					</div>
+					<div>
+					<input type="checkbox" id="bt_menu2">
+					<label for="bt_menu2">&#9776;</label>
+					</div>
+					<div class="coluna col10">
+						<nav>
+							<ul class="menu2 inline sem-marcador">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="clientes.html">Clientes</a></li>
+								<li><a href="servicos.html">Serviços</a></li>
+								<li><a href="sobre.html">Sobre</a></li>
+								<li><a href="contato.html">Contato</a></li>
+							</ul>	
+						</nav>
+					</div>
+				</header>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="linha">
+				<footer>
+					<div class="coluna col12">
+						<span>&copy; 2020 - DeTuPo Estúdios <p class="cor1">Todos os direitos reservados</p></span>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
